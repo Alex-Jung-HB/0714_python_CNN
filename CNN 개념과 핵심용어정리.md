@@ -5,19 +5,22 @@
 - 필터/커널 (Filter/Kernel): 입력에 적용되는 가중치 행렬 (보통 3×3, 5×5 크기)  
 - 스트라이드 (Stride): 필터가 이동하는 간격    
 - 패딩 (Padding): 입력 주변에 추가하는 값 (보통 0)  
-  . Valid padding: 패딩 없음  
-  . Same padding: 출력 크기를 입력과 동일하게 유지  
+  . Valid padding: 패딩을 추가하지 않음.  
+  . Same padding: 출력 크기를 입력과 동일하게 유지하도록 가장자리에 0을 추가  
+  . 예시) 5×5 입력에 3×3 필터를 적용할 때:  
+      : Valid: 3×3 출력 (크기 감소)  
+      : Same: 5×5 출력 (패딩으로 크기 유지)  
 - 특성 맵 (Feature Map): 컨볼루션 연산의 출력 결과  
-## B) 풀링 레이어 (Pooling Layer)  
-- 최대 풀링 (Max Pooling): 영역 내 최댓값 선택  
-- 평균 풀링 (Average Pooling): 영역 내 평균값 계산  
-- 글로벌 풀링 (Global Pooling): 전체 특성 맵에 대한 풀링  
+## B) 풀링 레이어 (Pooling Layer): 특성맵의 크기를 줄이고 중요한 정보만 추출하는 다운샘플링 레이어    
+- 최대 풀링 (Max Pooling): 영역 내 최댓값 선택, 가장 강한 활성화 값을 보존, 노이즈에 강하고 주요 특성 강조  
+- 평균 풀링 (Average Pooling): 영역 내 평균값 계산, 전체적인 특성을 부드럽게 보존, Max pooling보다 정보 손실 적음    
+- 글로벌 풀링 (Global/Average Pooling): 전체 특성맵의 값을 하나의 값으로 평균, 완전연결층 대신 사용하여 파라미터 대폭 감소    
 * 활성화 함수 (Activation Functions)  
 - ReLU (Rectified Linear Unit): f(x) = max(0, x)  
-- Leaky ReLU: 음수 영역에서 작은 기울기 유지  
+- Leaky ReLU: 음수 영역에서 작은 기울기 유지    
 - Sigmoid: S자 형태의 함수 (0~1 출력)  
 - Tanh: 쌍곡탄젠트 함수 (-1~1 출력)  
-## C) 정규화 기법  
+## C) 정규화 기법:  
 - 배치 정규화 (Batch Normalization)    
   . 각 배치의 평균과 분산을 정규화  
   . 학습 안정성과 속도 향상  
