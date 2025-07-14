@@ -251,4 +251,4 @@ def medical_sharpening(image):
 - 노이즈와 아티팩트 관리
 - 도메인별 최적화
 
-앞으로도 AI 기술의 발전과 함께 더욱 지능적이고 효과적인 샤프닝 기법들이 개발될 것으로 예상됩니다.
+![사프닝필터 결과비교](https://github.com/user-attachments/assets/c7249694-20eb-4a2f-ba2f-0e705be7a064)
