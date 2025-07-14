@@ -71,3 +71,6 @@
 - GPU 가속: CUDA, cuDNN 활용  
 - 혼합 정밀도 (Mixed Precision): 메모리 효율성  
 - 모델 압축: 양자화, 프루닝
+
+# 4. Advanced CNN 학습링크
+https://yjjo.tistory.com/8
