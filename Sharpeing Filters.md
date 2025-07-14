@@ -252,3 +252,5 @@ def medical_sharpening(image):
 - 도메인별 최적화
 
 ![사프닝필터 결과비교](https://github.com/user-attachments/assets/c7249694-20eb-4a2f-ba2f-0e705be7a064)
+
+![사파닝필터 처리 예시](https://github.com/user-attachments/assets/e2f08376-908b-4bd1-9547-be845dce33aa)
