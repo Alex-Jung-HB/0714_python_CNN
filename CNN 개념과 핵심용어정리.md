@@ -44,7 +44,7 @@ o 특수 기법
   . 과적합 방지 및 일반화 성능 향상
 - 어텐션 메커니즘 (Attention Mechanism)
   . 중요한 영역에 집중하는 기법
-  . CBAM (Convolutional Block Attention Module) 등
+  . CBAM (Convolutional Block Attention Module) 등  
 o 성능 지표  
 - 정확도 (Accuracy): 전체 중 올바르게 분류한 비율
 - 정밀도 (Precision): 양성 예측 중 실제 양성 비율
